@@ -45,6 +45,7 @@ public/uploads/
 public/assets/
 .npm-cache/
 src/media/
+build/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/

@@ -10,12 +10,10 @@ const Home = () => {
   const [loader, setLoader] = useState(true);
   const [progressReady, setProgressReady] = useState(false);
 
-  const [startIndex, setStartIndex] = useState(0);
-  const ITEMS_PER_VIEW = 4;
-
   const timerRef = useRef(null);
   const progressRaf1Ref = useRef(null);
   const progressRaf2Ref = useRef(null);
+  const activeVideoRef = useRef(null);
 
   const INTERVAL = 6000;
 
@@ -30,22 +28,10 @@ const Home = () => {
     { video: Video2 },
   ];
 
-  const projects = [
-    { title: 'Nokia Lumia 5.1', sub: 'Nokia 1', subSecondary: "Mobile Phone's Future" },
-    { title: 'Nokia Lumia 7.1', sub: 'Nokia 2', subSecondary: 'Mobile Phone’s Future' },
-    { title: 'Nokia Lumia 5.1', sub: 'Nokia 3', subSecondary: "Mobile Phone's Future" },
-    { title: 'Nokia Lumia 7.1', sub: 'Nokia 4', subSecondary: 'Mobile Phone’s Future' },
-    { title: 'Nokia Lumia 5.1', sub: 'Nokia 5', subSecondary: "Mobile Phone's Future" },
-    { title: 'Nokia Lumia 7.1', sub: 'Nokia 6', subSecondary: 'Mobile Phone’s Future' },
-    { title: 'Nokia Lumia 5.1', sub: 'Nokia 7', subSecondary: "Mobile Phone's Future" },
-    { title: 'Nokia Lumia 7.1', sub: 'Nokia 8', subSecondary: 'Mobile Phone’s Future' }
-  ];
-
-  const visibleProjects = projects.slice(startIndex, startIndex + ITEMS_PER_VIEW);
-
   useEffect(() => {
     startTimer();
     return () => clearInterval(timerRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -65,8 +51,21 @@ const Home = () => {
   }, [currentSlide, loader]);
 
   useEffect(() => {
-    setTimeout(() => setLoader(false), 2800);
+    const timeoutId = setTimeout(() => setLoader(false), 2800);
+    return () => clearTimeout(timeoutId);
   }, []);
+
+  useEffect(() => {
+    if (loader) return;
+    const videoEl = activeVideoRef.current;
+    if (!videoEl) return;
+
+    // Autoplay can be blocked in some browsers; best-effort only.
+    const maybePromise = videoEl.play();
+    if (maybePromise && typeof maybePromise.catch === 'function') {
+      maybePromise.catch(() => {});
+    }
+  }, [currentSlide, loader]);
 
   const startTimer = () => {
     clearInterval(timerRef.current);
@@ -86,44 +85,25 @@ const Home = () => {
     startTimer();
   };
 
-const handleNext = () => {
-  const newIndex = startIndex + ITEMS_PER_VIEW;
+  const handlePrevSlide = () => {
+    const nextIndex = (currentSlide - 1 + slides.length) % slides.length;
+    goToSlide(nextIndex, true);
+  };
 
-  if (newIndex < projects.length) {
-    setStartIndex(newIndex);
+  const handleNextSlide = () => {
+    const nextIndex = (currentSlide + 1) % slides.length;
+    goToSlide(nextIndex, true);
+  };
 
-    setProgressReady(false); // 🔥 RESET
-
-    setCurrentSlide(newIndex);
-
-    setTimeout(() => {
-      setProgressReady(true);
-    }, 50);
-
-    startTimer();
-  }
-};
-
-const handlePrev = () => {
-  const newIndex = startIndex - ITEMS_PER_VIEW;
-
-  if (newIndex >= 0) {
-    setStartIndex(newIndex);
-
-    setProgressReady(false); // 🔥 RESET
-
-    setCurrentSlide(newIndex);
-
-    setTimeout(() => {
-      setProgressReady(true);
-    }, 50);
-
-    startTimer();
-  }
-};
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') handlePrevSlide();
+    if (e.key === 'ArrowRight') handleNextSlide();
+  };
 
   const openVideoInNewTab = (index) => {
-    const videoSrc = slides[index].video;
+    const videoSrc = slides[index]?.video;
+    if (!videoSrc) return;
+
     const win = window.open('', '_blank');
     if (!win) return;
 
@@ -139,13 +119,15 @@ const handlePrev = () => {
 
   if (loader) {
     return (
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-        width: '100%'
-      }}>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100vh',
+          width: '100%',
+        }}
+      >
         <img src={loaderImage} alt="loader" style={{ width: '17rem', height: '10rem' }} />
       </div>
     );
@@ -156,68 +138,55 @@ const handlePrev = () => {
       <div id="transition-overlay"></div>
 
       <div id="video-container">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`video-slide ${index === currentSlide ? 'active' : ''}`}
-            onDoubleClick={() => openVideoInNewTab(index)}
-          >
-            <video src={slide.video} autoPlay muted loop playsInline />
-          </div>
-        ))}
+        <div className="video-slide active" onDoubleClick={() => openVideoInNewTab(currentSlide)}>
+          <video
+            key={currentSlide}
+            ref={activeVideoRef}
+            src={slides[currentSlide].video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          />
+        </div>
       </div>
 
       <Navbar />
 
-      <div id="project-strip">
+      <div
+        className="slide-controls"
+        role="group"
+        aria-label="Video slider controls"
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
+      >
+        {/* <button className="slide-arrow" type="button" onClick={handlePrevSlide} aria-label="Previous video">
+          ‹
+        </button> */}
 
-        <div
-          className="arrow left"
-          onClick={handlePrev}
-          style={{ opacity: startIndex === 0 ? 0.3 : 1 }}
-        >
-          ◀
-        </div>
-
-        {visibleProjects.map((project, index) => {
-          const actualIndex = startIndex + index;
-
-          return (
-            <div
-              key={actualIndex}
-              className={`project-item ${
-                actualIndex === currentSlide
-                  ? `active ${progressReady ? 'progress-active' : ''}`
-                  : ''
+        <div className="slide-lines" aria-label="Video list">
+          {slides.map((_, index) => (
+           <>
+           <div onClick={() => goToSlide(index, true)}>
+            <button
+              key={index}
+              type="button"
+              className={`slide-line ${
+                index === currentSlide ? `active ${progressReady ? 'progress-active' : ''}` : ''
               }`}
-              onClick={() => goToSlide(actualIndex, true)}
-              onDoubleClick={() => openVideoInNewTab(actualIndex)}
-            >
-              <div className="project-title">
-                {project.title}
-                <span className="plus-icon">+</span>
-              </div>
-              <div className="project-sub">
-                {project.sub}<br />
-                <span className="project-sub-secondary">
-                  {project.subSecondary}
-                </span>
-              </div>
+              aria-label={`Go to video ${index + 1}`}
+              aria-current={index === currentSlide ? 'true' : 'false'}
+              // onClick={() => goToSlide(index, true)}
+            />
             </div>
-          );
-        })}
-
-        <div
-          className="arrow right"
-          onClick={handleNext}
-          style={{
-            opacity:
-              startIndex + ITEMS_PER_VIEW >= projects.length ? 0.3 : 1
-          }}
-        >
-          ▶
+           </>
+          ))}
         </div>
 
+        {/* <button className="slide-arrow" type="button" onClick={handleNextSlide} aria-label="Next video">
+          ›
+        </button> */}
       </div>
 
       <div id="logo">SUGAR MEDIA</div>
