@@ -1,0 +1,126 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  width: calc(33.333% - 14px); /* Account for gap */
+  min-width: 280px;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  flex: 0 1 auto;
+}
+
+/* Special styling for single item */
+.cards-container.single-item .card {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Special styling for two items */
+.cards-container.two-items {
+  max-width: 900px;
+}
+
+.cards-container.two-items .card {
+  width: calc(50% - 10px);
+  max-width: none;
+}
+
+/* For multiple items, maintain 3 per row on large screens */
+.cards-container.multiple-items .card {
+  width: calc(33.333% - 14px);
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 50%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  flex: 1;
+  padding: 20px;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.card-content h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card-content p {
+  color: white;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1400px) {
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-container.multiple-items .card {
+    width: calc(50% - 10px);
+  }
+  
+  .cards-container.two-items {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container.multiple-items .card,
+  .cards-container.two-items .card,
+  .cards-container.single-item .card {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .cards-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-content h3 {
+    font-size: 14px;
+  }
+
+  .card-content p {
+    font-size: 9px;
+  }
+}

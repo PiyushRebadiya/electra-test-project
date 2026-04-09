@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Sugar Media</title>
+
+    <!-- <meta name="description" content="Spark & Riot...">
+    <meta property="og:site_name" content="Spark & Riot">
+    <meta property="og:title" content="About"> -->
+    <!-- <meta property="og:description" content="Spark & Riot..."> -->
+    <!-- <meta property="og:url" content="https://www.sparkandriot.com/about">
+    <meta property="og:image" content="https://www.sparkandriot.com/gfx/sharedimagespark.jpeg"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Spark and Riot">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#080E17">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="api/player.js"></script>
+    <meta name="csrf-token" content="69a7b232712cc">
+    <script id="csrfToken">
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        });
+    </script>
+    <link rel="canonical" href="about.html">
+    <link type="text/css" rel="stylesheet" href="assets/css/parts/header.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/parts/footer.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/parts/socials.css?1752751697">
+    <link type="text/css" rel="stylesheet" href="assets/css/parts/menu.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/blocks/fullscreen_block.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/video-fallback.css?1752751697">
+    <link type="text/css" rel="stylesheet" href="libjs/select2/css/select2.css?1752751698">
+    <link type="text/css" rel="stylesheet" href="assets/css/parts/intro.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/blocks/about_header_block.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/blocks/impact_block.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/blocks/image_text_grid_block.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/blocks/team_overview_block.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="assets/css/blocks/cta_block.css?1753864224">
+    <link type="text/css" rel="stylesheet" href="https://jivanand.in/assets/css/footer.css">
+
+    <style>
+        @font-face {
+            font-family: 'Monument Extended';
+            src: url('https://fonts.cdnfonts.com/s/29054/MonumentExtended-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Monument Extended';
+            src: url('https://fonts.cdnfonts.com/s/29054/MonumentExtended-Ultrabold.woff') format('woff');
+            font-weight: 800;
+            font-style: normal;
+        }
+    </style>
+    <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet" />
+
+    <style>
+        footer h1 {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 856px;
+            padding: 0 16px;
+            text-align: center;
+            width: 100%
+        }
+
+        footer .btn_wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 24px
+        }
+
+        footer .first_grid {
+            grid-gap: 1px;
+            background-color: #323232;
+            display: grid;
+            gap: 1px;
+            grid-template-columns: 100px 140px 140px 1fr 140px 140px 100px;
+            margin-top: 60px;
+            padding: 1px
+        }
+
+        @media only screen and (max-width: 1024px) {
+            footer .first_grid {
+                grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            footer .first_grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        footer .first_grid .box,
+        footer .first_grid .empty {
+            background-color: #0e0e0e;
+            border: 1px solid #0000;
+            height: 80px;
+            transition: all .3s ease-in-out
+        }
+
+        footer .first_grid .box:has(a):hover,
+        footer .first_grid .empty:has(a):hover {
+            border: 1px solid #fff
+        }
+
+        footer .first_grid .box .dot-grid,
+        footer .first_grid .empty .dot-grid {
+            height: 100%;
+            left: 0;
+            opacity: .6;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            width: 100%
+        }
+
+        footer .first_grid .box.c,
+        footer .first_grid .empty.c {
+            position: relative
+        }
+
+        @media only screen and (max-width: 1024px) {
+
+            footer .first_grid .box.c,
+            footer .first_grid .empty.c {
+                display: none
+            }
+        }
+
+        footer .first_grid .box a,
+        footer .first_grid .empty a {
+            display: grid;
+            height: 100%;
+            line-height: 100%;
+            place-items: center;
+            width: 100%
+        }
+
+        footer .first_grid .box a svg,
+        footer .first_grid .empty a svg {
+            font-size: 20px
+        }
+
+        @media only screen and (max-width: 576px) {
+            footer .first_grid .empty {
+                display: none
+            }
+        }
+
+        footer .second_grid {
+            grid-gap: 1px;
+            background-color: #323232;
+            display: grid;
+            gap: 1px;
+            grid-template-columns: 100px 1fr 140px 140px 140px 100px;
+            padding: 1px
+        }
+
+        @media only screen and (max-width: 1024px) {
+            footer .second_grid {
+                grid-template-columns: 50px 1fr 1fr 1fr 50px
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            footer .second_grid {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+        }
+
+        footer .second_grid .box,
+        footer .second_grid .empty {
+            background-color: #0e0e0e;
+            border: 1px solid #0000;
+            height: 80px;
+            transition: all .3s ease-in-out
+        }
+
+        footer .second_grid .box:has(a):hover,
+        footer .second_grid .empty:has(a):hover {
+            border: 1px solid #fff
+        }
+
+        footer .second_grid .box.text,
+        footer .second_grid .empty.text {
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+            padding: 0 40px
+        }
+
+        @media only screen and (max-width: 1024px) {
+
+            footer .second_grid .box.text,
+            footer .second_grid .empty.text {
+                display: none
+            }
+        }
+
+        footer .second_grid .box a,
+        footer .second_grid .empty a {
+            display: grid;
+            height: 100%;
+            line-height: 100%;
+            place-items: center;
+            width: 100%
+        }
+
+        footer .second_grid .box a svg,
+        footer .second_grid .empty a svg {
+            font-size: 20px
+        }
+
+        @media only screen and (max-width: 576px) {
+            footer .second_grid .empty {
+                display: none
+            }
+        }
+
+        footer .copy_right {
+            flex-direction: column;
+            gap: 8px;
+            padding: 48px 16px
+        }
+
+        footer .copy_right,
+        footer .copy_right p {
+            align-items: center;
+            display: flex;
+            justify-content: center
+        }
+
+        footer .copy_right p {
+            text-align: center
+        }
+
+        footer .copy_right p a {
+            margin-left: 8px;
+            text-transform: capitalize
+        }
+
+        footer .copy_right p a,
+        footer .copy_right p a span {
+            transition: all .3s ease-in-out
+        }
+
+        footer .copy_right p a:hover span {
+            color: #fff
+        }
+
+        footer h1 {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 856px;
+            padding: 0 16px;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer .btn_wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 24px;
+        }
+    </style>
+    <style>
+        :root {
+            --primary-accent: #E8601A;
+            --orange: #E8601A;
+            --white: #ffffff;
+            --display-font: 'Monument Extended', 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 40px;
+            margin-top: 20px;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+
+        .mobile-nav-toggle {
+            background: transparent;
+            border: none;
+            width: 32px;
+            height: 24px;
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .mobile-nav-toggle span {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--white);
+            border-radius: 999px;
+            transition: transform 0.25s ease, opacity 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+        }
+
+        .mobile-nav-toggle span:nth-child(1) {
+            top: 0;
+        }
+
+        .mobile-nav-toggle span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .mobile-nav-toggle span:nth-child(3) {
+            bottom: 0;
+        }
+
+        .mobile-nav-toggle.open span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .mobile-nav-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-nav-toggle.open span:nth-child(3) {
+            bottom: auto;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+        .mobile-nav-menu {
+            display: none;
+        }
+
+        .mobile-nav-menu.open {
+            display: block;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-family: var(--display-font);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            opacity: 0.96;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        span,
+        div,
+        li,
+        ul,
+        ol,
+        button,
+        label,
+        input,
+        textarea,
+        .navLink,
+        .bigTitle,
+        .mediumTitle,
+        .normalTitleSans,
+        .normalTitleSerif,
+        .normalSmallTitle,
+        .smallTitle,
+        .subTitle,
+        .text,
+        .body-1,
+        .impactText,
+        .ctaTitleTop,
+        .ctaTitleBottom,
+        footer h1,
+        footer p,
+        footer a,
+        footer .btn_wrap,
+        footer .copy_right,
+        nav,
+        nav a,
+        .mobile-nav,
+        .mobile-nav-menu a,
+        .mobile-brand,
+        .content .blocks section,
+        .replaceFont,
+        .navItem,
+        .navPrimaryWrapper,
+        .bigMenu .navLink,
+        .bigMenu .navItem,
+        .menuSocialWrapper,
+        .socialLink {
+            font-family: var(--display-font) !important;
+        }
+
+        .bigTitle.primary,
+        .mediumTitle.primary,
+        .normalTitleSans.primary,
+        .normalTitleSerif.primary,
+        .normalSmallTitle.primary,
+        .smallTitle.primary,
+        .buttonBold.primary,
+        .navigationButton.primary,
+        strong.primary,
+        .text.primary,
+        strong,
+        .buttonLink.primary,
+        .buttonLink .maskWrapper .innerTextWrapper .innerText:last-child,
+        .navPrimaryWrapper.active .navItem .navLink,
+        .buttonPrimaryWrapper .buttonItemOriginal .bracket,
+        .buttonPrimaryWrapper .buttonItemOriginal .buttonLink,
+        .buttonPrimaryWrapper .buttonItemDuplicate .bracket,
+        .buttonPrimaryWrapper .buttonItemDuplicate .buttonLink,
+        .team-member-detail .member-profile .member-header h1,
+        .team-member-detail .member-profile .member-content .member-info .contact-info .contact-item strong,
+        .team-member-detail .member-profile .member-content .member-personal-info h3,
+        .team-member-detail .member-profile .member-content .member-personal-info .personal-grid .personal-item .value {
+            color: #E8601A !important;
+        }
+
+        .subTitle::before,
+        .button:not(.buttonLink)::before,
+        .buttonLink:not(.buttonLink)::before,
+        html:has([data-primary-background]),
+        body:has([data-primary-background]),
+        html .text .bullet:before,
+        body .text .bullet:before {
+            background-color: #E8601A !important;
+            background: #E8601A !important;
+        }
+
+        .button:not(.buttonLink)::after,
+        .buttonLink:not(.buttonLink)::after,
+        .team-member-detail .member-profile .member-content .member-personal-info .personal-grid .personal-item:hover {
+            border-color: #E8601A !important;
+        }
+
+        html,
+        body,
+        * {
+            cursor: auto !important;
+        }
+
+        nav a,
+        .mobile-nav-menu a {
+            cursor: pointer !important;
+        }
+
+        .mainCursor,
+        .sparkCursor,
+        .customVideoCursor {
+            display: none !important;
+        }
+
+        .teamOverviewBlock .personalSlider .personalItem .personalValue,
+        .teamOverviewBlock .personalItems .personalItem .personalValue {
+            color: #E8601A !important;
+        }
+
+        .aboutHeaderBlock .aboutTitleWrapper.left .aboutLine {
+            flex-grow: 1;
+            height: 1px;
+            margin-bottom: 2.77778vw;
+            margin-left: 1.11111vw;
+            background-color: #E8601A !important;
+            transform: scaleX(0);
+            transform-origin: left center;
+        }
+
+        html.overflow,
+        body.overflow {
+            overflow-y: auto !important;
+            height: auto !important;
+        }
+
+        .introAnim {
+            display: none !important;
+        }
+
+        .content {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        @media (max-width: 991px) {
+
+            nav {
+                display: none;
+            }
+
+            .mobile-nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 130;
+                padding: 16px 20px 8px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                background: linear-gradient(to bottom,
+                        rgba(0, 0, 0, 0.95),
+                        rgba(0, 0, 0, 0.7),
+                        transparent);
+            }
+
+            .mobile-nav-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .mobile-brand {
+                font-family: var(--display-font);
+                font-size: 16px;
+                letter-spacing: 0.18em;
+                color: var(--white);
+            }
+
+            .mobile-nav-menu {
+                background: rgba(0, 0, 0, 0.9);
+                border-radius: 14px;
+                padding: 10px 14px;
+                box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+            }
+
+            .mobile-nav-menu a {
+                display: block;
+                padding: 10px 4px;
+                color: var(--white);
+                text-decoration: none;
+                font-family: var(--display-font);
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            }
+
+            .mobile-nav-menu a:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="assets/css/blocks/fullscreen_block.css?1753864224">
+    <script type="text/javascript" src="libjs/select2/js/select2.full.min.js?1752751698" data-cookieconsent="ignore">
+    </script>
+    <script type="text/javascript" src="libjs/gsap/gsap.min.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="libjs/gsap/Draggable.min.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="libjs/gsap/ScrollTrigger.min.js?1752751698"
+        data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="libjs/gsap/CustomEase.min.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="libjs/gsap/SplitText.min.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="libjs/lenis/lenis.min.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="libjs/flickity/flickity.min.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="libjs/jqueryplugins/jquery.cookie.js?1752751698" data-cookieconsent="ignore">
+    </script>
+    <script type="text/javascript" src="assets/js/utils/image-fallback.js?1753864224"
+        data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/scroll/inview.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/scroll/video.js?1765287720" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/scroll/speed.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/scroll/lines.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/scroll/words.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/scroll/letters.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/scroll/blur.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/scroll/blurred_images.js?1752751698"
+        data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/parts/intro.js?1753864224" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/parts/noise.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/blocks/fullscreen_block.js?1765288780" data-cookieconsent="ignore">
+    </script>
+    <script type="text/javascript" src="assets/js/global/fullscreen_video_trigger.js?1765287720"
+        data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/parts/header.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/parts/cookie_popup_delay.js?1753864224" data-cookieconsent="ignore">
+    </script>
+    <script type="text/javascript" src="assets/js/blocks/about_header_block.js?1752751698" data-cookieconsent="ignore">
+    </script>
+    <script type="text/javascript" src="assets/js/blocks/team_overview_block.js?1752751698" data-cookieconsent="ignore">
+    </script>
+    <script type="text/javascript" src="assets/js/blocks/cta_block.js?1752751698" data-cookieconsent="ignore"></script>
+    <script type="text/javascript" src="assets/js/blocks/fullscreen_block.js?1765288780" data-cookieconsent="ignore">
+    </script>
+    <script type="text/javascript" src="assets/js/parts/customCursor.js?1753174589"
+        data-cookieconsent="ignore"></script>
+    <script>
+        var GA_MEASUREMENT_ID = 'G-ENH866S3DP';
+    </script>
+    <script>
+        var activeModel;
+
+        var scroller;
+        var currentScrollY = 0;
+        var windowWidth = 0;
+        var windowHeight = 0;
+
+        document.fonts.ready.then(function () {
+            initPage();
+
+            windowWidth = $(window).width();
+            windowHeight = $(window).height();
+
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            if ("ontouchstart" in document.documentElement) {
+                $("html").addClass("touch");
+            }
+
+            $(window).on("resize", function () {
+                if ($(window).width() > windowWidth) {
+                    windowHeight = $(window).height();
+                    windowWidth = $(window).width();
+                }
+            });
+
+            //if window > 580px
+            if ($(window).width() > 580) {
+                $(window).on("scroll", function () {
+                    if ($(".select2-container--open").length > 0) {
+                        $(".select2-hidden-accessible").select2("close");
+                    }
+                });
+                $(document)
+                    .off("select2:open.select2LenisPrevent", ".customSelect, .select")
+                    .on(
+                        "select2:open.select2LenisPrevent",
+                        ".customSelect, .select",
+                        function () {
+                            $(".select2-dropdown").attr("data-lenis-prevent", true);
+                        }
+                    );
+            }
+        });
+
+        function initLenis() {
+            scroller = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                orientation: "vertical",
+                gestureOrientation: "vertical",
+                smoothWheel: true,
+                wheelMultiplier: 2,
+                smoothTouch: true,
+                touchMultiplier: 2,
+                syncTouch: true,
+                touchInertiaMultiplier: 35,
+            });
+
+            if (scroller) {
+                scroller.stop();
+            }
+        }
+
+        function raf(time) {
+            if (scroller) {
+                scroller.raf(time);
+            }
+            requestAnimationFrame(raf);
+        }
+
+        function preloadPage() {
+            initLenis();
+            requestAnimationFrame(raf);
+
+            currentScrollY = $(window).scrollTop();
+            if (scroller) {
+                scroller.on("scroll", function (e) {
+                    currentScrollY = $(window).scrollTop();
+                });
+            }
+        }
+
+        function initPage() {
+            preloadPage();
+
+            if (navigator.userAgent.indexOf("Windows") !== -1) {
+                $("body").addClass("windows");
+            } else if (navigator.userAgent.indexOf("Mac OS") !== -1) {
+                $("body").addClass("macos");
+            }
+
+            $("html").removeClass("stopScroll fade");
+            $("a[href*=\\#]").addClass("hashtagLink");
+
+            if (scroller) {
+                scroller.start();
+            }
+
+            $("html, body").removeClass("overflow");
+            initPPEditorialOldItalic();
+            lazyLoadImages();
+
+            $(document).trigger("initPage");
+
+            if (window.location.hash) {
+                setTimeout(function () {
+                    var hash = window.location.hash.split("#")[1];
+                    var target = $("[data-anchor='" + hash + "']");
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - ($("header .headerBar").height() * 2.5)
+                        }, 500);
+                    }
+                }, 300);
+            }
+
+            $(".customSelect").each(function (i, el) {
+                if ($(el).data("search")) {
+                    $(el).select2({
+                        placeholder: $(this).data("placeholder"),
+                    });
+                } else {
+                    $(el).select2({
+                        placeholder: $(this).data("placeholder"),
+                        minimumResultsForSearch: -1,
+                    });
+                }
+            });
+
+            $(document)
+                .off("select2:open.select2LenisPrevent", ".customSelect")
+                .on("select2:open.select2LenisPrevent", ".customSelect", function () {
+                    $(".select2-dropdown").attr("data-lenis-prevent", true);
+                });
+
+            $(document)
+                .off("select2:open.multiselect2LenisPrevent", ".multiSelect")
+                .on("select2:open.multiselect2LenisPrevent", ".multiSelect", function () {
+                    $(".multiSelectContainer").attr("data-lenis-prevent", true);
+                });
+        }
+
+        $(document).on("click", ".hashtagLink", function (e) {
+            e.preventDefault();
+            var hash = $(this).data("hash") || $(this).attr("href").split("#")[1];
+
+            if (!hash) return;
+
+            var target = $("[data-anchor='" + hash + "']");
+            if (target.length) {
+                var offset = target.offset().top - ($("header .headerBar").height() * 2.5);
+
+                if (scroller) {
+                    if (offset < 0) {
+                        scroller.scrollTo(0, {
+                            lerp: 0.1,
+                            duration: 1,
+                        });
+                    } else {
+                        scroller.scrollTo(target[0], {
+                            offset: -($("header .headerBar").height() * 2.5),
+                            lerp: 0.1,
+                            duration: 1,
+                        });
+                    }
+                } else {
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 500);
+                }
+            }
+        });
+
+        function lazyLoadImages() {
+            var lazyloadImages;
+            if ("IntersectionObserver" in window) {
+                lazyloadImages = document.querySelectorAll(".lazy");
+                const config = {
+                    root: null,
+                    rootMargin: '500px',
+                    threshold: 0.0
+                };
+                var imageObserver = new IntersectionObserver(function (entries, observer) {
+                    $(entries).each(function (i, entry) {
+                        if (entry.isIntersecting) {
+                            var image = entry.target;
+                            image.classList.remove("lazy");
+
+                            if (image.tagName === 'IMG' && image.dataset.src) {
+                                image.src = image.dataset.src;
+                            }
+
+                            if (image.tagName === 'SOURCE' && image.dataset.srcset) {
+                                image.srcset = image.dataset.srcset;
+                            }
+
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                }, config);
+                $(lazyloadImages).each(function (i, image) {
+                    imageObserver.observe(image);
+                });
+            } else {
+                $(".lazy").each(function (i, image) {
+                    image.classList.remove("lazy");
+
+                    if (image.tagName === 'IMG' && image.dataset.src) {
+                        image.src = image.dataset.src;
+                    }
+
+                    if (image.tagName === 'SOURCE' && image.dataset.srcset) {
+                        image.srcset = image.dataset.srcset;
+                    }
+                });
+            }
+        }
+
+        function initPPEditorialOldItalic() {
+            $(".replaceFont, strong").each(function () {
+                $(this).add($(this).find('*')).contents().filter(function () {
+                    return this.nodeType === Node.TEXT_NODE && $.trim(this.nodeValue) !== '';
+                }).each(function () {
+                    const updatedText = this.nodeValue.replace(/([ao])/gi, '<span class="italic">$1</span>');
+                    $(this).replaceWith($('<span>').html(updatedText).contents());
+                });
+            });
+        }
+
+        $(document).on("initHeader", function () {
+            if (typeof initHeader === 'function') {
+                initHeader();
+            }
+        });
+    </script>
+</head>
+
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <link type="text/css" rel="stylesheet" href="/assets/css/blocks/fullscreen_block.css?1753864224" />
+
+    <script type="text/javascript" src="/libjs/swup/SwupHeadPlugin.min.js?1752751698"
+        data-cookieconsent="ignore"></script>
+</body>
+
+</html>

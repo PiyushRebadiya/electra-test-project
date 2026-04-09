@@ -1,0 +1,485 @@
+html:not(.touch) .directorsOverviewBlock .directors:hover .director {
+  opacity: 0.2;
+  color: #FFFFFF;
+}
+html:not(.touch) .directorsOverviewBlock .directors:hover .director .imageWrapper .innerImage:after {
+  background: #FFFFFF;
+}
+html:not(.touch) .directorsOverviewBlock .directors:hover .director:hover {
+  opacity: 1;
+  color: #CCFF6C;
+}
+html:not(.touch) .directorsOverviewBlock .directors:hover .director:hover .imageWrapper .innerImage:after {
+  background: #CCFF6C;
+}
+html:not(.touch) .directorsOverviewBlock .director:hover {
+  color: #CCFF6C;
+}
+.directorsOverviewBlock {
+  padding-top: 14.86111111vw;
+}
+.directorsOverviewBlock.inview .smallTitle {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: opacity 0.6s 0.45s ease-out, transform 0.6s 0.45s ease-out;
+  -moz-transition: opacity 0.6s 0.45s ease-out, transform 0.6s 0.45s ease-out;
+  -ms-transition: opacity 0.6s 0.45s ease-out, transform 0.6s 0.45s ease-out;
+  -o-transition: opacity 0.6s 0.45s ease-out, transform 0.6s 0.45s ease-out;
+  transition: opacity 0.6s 0.45s ease-out, transform 0.6s 0.45s ease-out;
+}
+.directorsOverviewBlock.inview .wrap {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: opacity 0.6s 0s ease-out, transform 0.6s 0s ease-out;
+  -moz-transition: opacity 0.6s 0s ease-out, transform 0.6s 0s ease-out;
+  -ms-transition: opacity 0.6s 0s ease-out, transform 0.6s 0s ease-out;
+  -o-transition: opacity 0.6s 0s ease-out, transform 0.6s 0s ease-out;
+  transition: opacity 0.6s 0s ease-out, transform 0.6s 0s ease-out;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(100) {
+  transition-delay: 8.45s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(99) {
+  transition-delay: 8.37s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(98) {
+  transition-delay: 8.29s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(97) {
+  transition-delay: 8.21s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(96) {
+  transition-delay: 8.13s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(95) {
+  transition-delay: 8.05s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(94) {
+  transition-delay: 7.97s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(93) {
+  transition-delay: 7.89s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(92) {
+  transition-delay: 7.81s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(91) {
+  transition-delay: 7.73s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(90) {
+  transition-delay: 7.65s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(89) {
+  transition-delay: 7.57s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(88) {
+  transition-delay: 7.49s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(87) {
+  transition-delay: 7.41s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(86) {
+  transition-delay: 7.33s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(85) {
+  transition-delay: 7.25s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(84) {
+  transition-delay: 7.17s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(83) {
+  transition-delay: 7.09s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(82) {
+  transition-delay: 7.01s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(81) {
+  transition-delay: 6.93s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(80) {
+  transition-delay: 6.85s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(79) {
+  transition-delay: 6.77s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(78) {
+  transition-delay: 6.69s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(77) {
+  transition-delay: 6.61s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(76) {
+  transition-delay: 6.53s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(75) {
+  transition-delay: 6.45s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(74) {
+  transition-delay: 6.37s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(73) {
+  transition-delay: 6.29s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(72) {
+  transition-delay: 6.21s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(71) {
+  transition-delay: 6.13s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(70) {
+  transition-delay: 6.05s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(69) {
+  transition-delay: 5.97s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(68) {
+  transition-delay: 5.89s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(67) {
+  transition-delay: 5.81s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(66) {
+  transition-delay: 5.73s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(65) {
+  transition-delay: 5.65s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(64) {
+  transition-delay: 5.57s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(63) {
+  transition-delay: 5.49s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(62) {
+  transition-delay: 5.41s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(61) {
+  transition-delay: 5.33s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(60) {
+  transition-delay: 5.25s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(59) {
+  transition-delay: 5.17s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(58) {
+  transition-delay: 5.09s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(57) {
+  transition-delay: 5.01s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(56) {
+  transition-delay: 4.93s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(55) {
+  transition-delay: 4.85s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(54) {
+  transition-delay: 4.77s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(53) {
+  transition-delay: 4.69s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(52) {
+  transition-delay: 4.61s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(51) {
+  transition-delay: 4.53s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(50) {
+  transition-delay: 4.45s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(49) {
+  transition-delay: 4.37s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(48) {
+  transition-delay: 4.29s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(47) {
+  transition-delay: 4.21s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(46) {
+  transition-delay: 4.13s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(45) {
+  transition-delay: 4.05s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(44) {
+  transition-delay: 3.97s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(43) {
+  transition-delay: 3.89s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(42) {
+  transition-delay: 3.81s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(41) {
+  transition-delay: 3.73s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(40) {
+  transition-delay: 3.65s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(39) {
+  transition-delay: 3.57s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(38) {
+  transition-delay: 3.49s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(37) {
+  transition-delay: 3.41s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(36) {
+  transition-delay: 3.33s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(35) {
+  transition-delay: 3.25s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(34) {
+  transition-delay: 3.17s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(33) {
+  transition-delay: 3.09s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(32) {
+  transition-delay: 3.01s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(31) {
+  transition-delay: 2.93s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(30) {
+  transition-delay: 2.85s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(29) {
+  transition-delay: 2.77s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(28) {
+  transition-delay: 2.69s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(27) {
+  transition-delay: 2.61s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(26) {
+  transition-delay: 2.53s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(25) {
+  transition-delay: 2.45s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(24) {
+  transition-delay: 2.37s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(23) {
+  transition-delay: 2.29s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(22) {
+  transition-delay: 2.21s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(21) {
+  transition-delay: 2.13s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(20) {
+  transition-delay: 2.05s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(19) {
+  transition-delay: 1.97s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(18) {
+  transition-delay: 1.89s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(17) {
+  transition-delay: 1.81s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(16) {
+  transition-delay: 1.73s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(15) {
+  transition-delay: 1.65s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(14) {
+  transition-delay: 1.57s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(13) {
+  transition-delay: 1.49s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(12) {
+  transition-delay: 1.41s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(11) {
+  transition-delay: 1.33s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(10) {
+  transition-delay: 1.25s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(9) {
+  transition-delay: 1.17s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(8) {
+  transition-delay: 1.09s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(7) {
+  transition-delay: 1.01s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(6) {
+  transition-delay: 0.93s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(5) {
+  transition-delay: 0.85s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(4) {
+  transition-delay: 0.77s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(3) {
+  transition-delay: 0.69s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(2) {
+  transition-delay: 0.61s;
+}
+.directorsOverviewBlock.inview .wrap:nth-child(1) {
+  transition-delay: 0.53s;
+}
+.directorsOverviewBlock .wrap {
+  display: block;
+  opacity: 0;
+  -webkit-transform: translateY(1.38888889vw);
+  -moz-transform: translateY(1.38888889vw);
+  -o-transform: translateY(1.38888889vw);
+  -ms-transform: translateY(1.38888889vw);
+  transform: translateY(1.38888889vw);
+}
+.directorsOverviewBlock .wrap:not(:last-child) {
+  margin-bottom: 1.38888889vw;
+}
+.directorsOverviewBlock .wrap:nth-child(even) {
+  text-align: right;
+}
+.directorsOverviewBlock .smallTitle {
+  -webkit-transform: translateY(1.38888889vw);
+  -moz-transform: translateY(1.38888889vw);
+  -o-transform: translateY(1.38888889vw);
+  -ms-transform: translateY(1.38888889vw);
+  transform: translateY(1.38888889vw);
+  opacity: 0;
+}
+.directorsOverviewBlock .line {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 1.11111111vw 0;
+  width: 100%;
+}
+.directorsOverviewBlock .director {
+  color: #CCFF6C;
+  text-decoration: none;
+  display: inline-flex;
+  -webkit-transition: opacity 0.3s 0s ease-out, transform 0.3s 0s ease-out;
+  -moz-transition: opacity 0.3s 0s ease-out, transform 0.3s 0s ease-out;
+  -ms-transition: opacity 0.3s 0s ease-out, transform 0.3s 0s ease-out;
+  -o-transition: opacity 0.3s 0s ease-out, transform 0.3s 0s ease-out;
+  transition: opacity 0.3s 0s ease-out, transform 0.3s 0s ease-out;
+}
+.directorsOverviewBlock .director .imageWrapper {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  transform-origin: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  width: 5.69444444vw;
+  margin: 0 0.69444444vw;
+}
+.directorsOverviewBlock .director .imageWrapper .innerImage {
+  display: block;
+  height: 0;
+  width: 100%;
+  padding-bottom: 114.28571429%;
+  background: #FFFFFF;
+}
+.directorsOverviewBlock .director .imageWrapper .innerImage img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  opacity: 1;
+  object-position: center;
+}
+@media all and (max-width: 1024px) {
+  .directorsOverviewBlock {
+    padding-top: 19.814vw;
+  }
+  .directorsOverviewBlock .wrap {
+    -webkit-transform: translateY(1.852vw);
+    -moz-transform: translateY(1.852vw);
+    -o-transform: translateY(1.852vw);
+    -ms-transform: translateY(1.852vw);
+    transform: translateY(1.852vw);
+  }
+  .directorsOverviewBlock .wrap:not(:last-child) {
+    margin-bottom: 1.852vw;
+  }
+  .directorsOverviewBlock .smallTitle {
+    -webkit-transform: translateY(1.852vw);
+    -moz-transform: translateY(1.852vw);
+    -o-transform: translateY(1.852vw);
+    -ms-transform: translateY(1.852vw);
+    transform: translateY(1.852vw);
+  }
+  .directorsOverviewBlock .line {
+    margin: 1.481vw 0;
+  }
+  .directorsOverviewBlock .director .imageWrapper {
+    width: 6.296vw;
+    margin: 0 0.926vw;
+  }
+  .directorsOverviewBlock .director .imageWrapper .innerImage {
+    padding-bottom: 103.8961039%;
+  }
+}
+@media all and (max-width: 580px) {
+  .directorsOverviewBlock {
+    padding-top: 20.36vw;
+  }
+  .directorsOverviewBlock .wrap {
+    -webkit-transform: translateY(5.09vw);
+    -moz-transform: translateY(5.09vw);
+    -o-transform: translateY(5.09vw);
+    -ms-transform: translateY(5.09vw);
+    transform: translateY(5.09vw);
+  }
+  .directorsOverviewBlock .wrap:not(:last-child) {
+    margin-bottom: 5.09vw;
+  }
+  .directorsOverviewBlock .smallTitle {
+    -webkit-transform: translateY(5.09vw);
+    -moz-transform: translateY(5.09vw);
+    -o-transform: translateY(5.09vw);
+    -ms-transform: translateY(5.09vw);
+    transform: translateY(5.09vw);
+  }
+  .directorsOverviewBlock .line {
+    margin: 4.07vw 0;
+  }
+  .directorsOverviewBlock .director .bigTitle {
+    font-size: 17.81vw;
+  }
+  .directorsOverviewBlock .director .lastName {
+    display: none;
+  }
+  .directorsOverviewBlock .director .imageWrapper {
+    width: 10.94vw;
+    margin: 0 1.27vw;
+  }
+  .directorsOverviewBlock .director .imageWrapper .innerImage {
+    padding-bottom: 123.37662338%;
+  }
+}

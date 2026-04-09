@@ -1,0 +1,34 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Monument Extended', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  height: auto !important;
+}
+
+html.stopScroll,
+html.stopScroll body,
+html.fadeOut,
+body.fadeOut,
+html.overflow,
+body.overflow {
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+:root {
+  --siteNavSpace: 110px;
+}
+
+.withSiteNav {
+  padding-top: var(--siteNavSpace);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
